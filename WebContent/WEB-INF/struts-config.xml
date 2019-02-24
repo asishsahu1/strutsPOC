@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 1.0//EN"
+   "http://jakarta.apache.org/struts/dtds/struts-config_1_0.dtd">
+
+<struts-config>
+
+   <form-beans>
+      <form-bean name = "doctorActionForm" type = "com.sf.form.DoctorActionForm" />
+   </form-beans>
+
+   <action-mappings>
+      <action
+         path = "/addDoctor"
+         type = "com.sf.action.AddDoctorAction"
+         name="doctorActionForm"
+         input="addDoctor.jsp" >
+
+         <forward name = "success" path = "/success.jsp" redirect="true"/>
+         <forward name = "Failure" path = "/failure.jsp" redirect="true"/>
+         
+      </action>
+   </action-mappings>
+</struts-config>
